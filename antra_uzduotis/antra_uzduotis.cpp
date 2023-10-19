@@ -16,6 +16,8 @@ int main()
 
     int num = 0;
 
+
+    // lietuviska abecele
     string abecele_lt[32] = {"a", "ą", "b", "c", "č", "d", "e", "ę", "ė", "f", "g", "h", 
     "i", "į", "y", "j", "k", "l", "m", "n", "o", "p", "r", "s", "š", "t", "u", "ų", "ū",
     "v", "z", "ž"};
@@ -30,15 +32,15 @@ int main()
 
     for (int i = 0;i<= tekstas.size();i++)
     {
-        cout << i << endl;
         tekstas_str[i] = tekstas[i];
         for (int j = 0;j <= 32;j++)
         {
             if (tekstas_str[i] == abecele_lt[j])
-            {
-                cout << "Skaicius :" << j << " raide: " << abecele_lt[j];
-                cout << endl;
-
+            {   
+                //testavimas ar veikia kodas
+                cout << "Skaicius :" << j << " raide: " << abecele_lt[j] << endl;
+                
+                // kodas kad nesikartotu pirma zodzio raide
                 num++;
                 if (num == 1)
                 {
