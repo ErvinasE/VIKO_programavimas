@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-
+    // kintamieji
     string raktas, tekstas;
 
     string tekstas_str[50], raktas_str[50];
