@@ -10,13 +10,15 @@ int main()
 
     string tekstas_str[50], raktas_str[50];
 
-    string uzsifruotas_zodis;
+    string uzsifruotas_zodis[50];
 
     int mod = 0;
     
     int tektas_indeksas[50];
 
     int num, num2 = 0;
+
+
 
 
     // lietuviska abecele
@@ -42,7 +44,7 @@ int main()
             if (tekstas_str[i] == abecele_lt[j])
             {   
                 //testavimas ar veikia kodas
-                cout << "Skaicius :" << j << " raide: " << abecele_lt[j] << endl;
+                // cout << "Skaicius :" << j << " raide: " << abecele_lt[j] << endl;
                 tektas_indeksas[i] = j;
 
                 // kodas kad nesikartotu pirma zodzio raide
@@ -65,7 +67,7 @@ int main()
         {
             if (raktas_str[k] == abecele_lt[l])
             {
-                cout << "Skaicius rakto : " << l << " raide: " << abecele_lt[l] << endl;
+                // cout << "Skaicius rakto : " << l << " raide: " << abecele_lt[l] << endl;
                 
                 mod = tektas_indeksas[k] + l;
                 if (mod > 32)
@@ -73,6 +75,10 @@ int main()
                     mod = mod - 32;
                 }
                 cout << "MOD : " << mod << endl;
+                uzsifruotas_zodis[k] = abecele_lt[mod];
+                cout << uzsifruotas_zodis[k];
+
+
                 
                 // kodas, kad nesikartotu pirma zodzio raide
                 num2++;
