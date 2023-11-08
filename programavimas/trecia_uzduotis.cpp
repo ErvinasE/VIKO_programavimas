@@ -18,20 +18,18 @@ bool balses()
     for (int i = 0;i<=12;i++)
     {
         if (raide == balses[i])
-        {
-            cout << "true";
+        {   
+            return true;
             break;
         }
-        if (raide != balses[i] && (i != 12))
+        if (raide != balses[i] && (i == 12))
         {
-            cout << "false";
+            return false;
         }
         else 
         {
             continue;
         }
-
-
     }       
 }
 void dbd()
@@ -46,11 +44,7 @@ int main ()
     {
         cout << "Pasirinkite kokia funckcija atlikti : 1 , 2, 3 ?" << endl;
         cin >> sk;
-        // while (sk != 1 || 2 || 3)
-        // {
-        //     cout << "pasirinkite galima varianta" << endl;
-        //     cin >> sk;
-        // }
+        
         switch (sk)
         {
             case 1:
