@@ -14,7 +14,6 @@ bool balses()
     string balses[12] = {"a","ą","e","ę","ė","i","į","y","o","u","ų","ū"};
     cout << "Iveskite raide " << endl;
     cin >> raide;
-
     for (int i = 0;i<=12;i++)
     {
         if (raide == balses[i])
@@ -32,14 +31,48 @@ bool balses()
         }
     }       
 }
-void dbd()
+int dbd(int sk1, int sk2)
 {
+    int liek = 1;
+    int dbd = 0;
+    int dal1, dal2;
+    if ( sk1 > sk2)
+    {
+        dal1 = sk1;
+        dal2 = sk2;
+    }
+    else 
+    {
+        dal1 = sk1;
+        dal2 = sk2;
+    }
+
+
+
+    while (liek >= 0)
+    {   
+        liek = dal1 % dal2;
+        dal2 = dal1;
+        dal2 = liek;
+        cout << liek << endl;
+        if (sk1 == 0 && liek == 0 && (dal1 / dal2 > 0))
+        {   
+            dal1 % dal2; 
+            cout << "DBD: " << dbd << endl;
+        }
+        else if (sk2 == 0)
+        {   dbd = sk1;
+            cout << "DBD: " << dbd << endl;
+        }
+    }
 
 }
 
 int main ()
 {
     int sk;
+    int sk1;
+    int sk2;
     while (true)
     {
         cout << "Pasirinkite kokia funckcija atlikti : 1 , 2, 3 ?" << endl;
@@ -54,13 +87,12 @@ int main ()
             cout << balses();
             break;
             case 3:
-            dbd();
-            break;
+            cout << "iveskite 2 skaicius" << endl;
+            cin >> sk1;
+            cin >> sk2;
+            dbd(sk1,sk2);
+            break;  
         }
-
-
-
-
     }
 
     return 0;
