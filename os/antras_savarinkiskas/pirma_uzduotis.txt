@@ -1,0 +1,25 @@
+echo "Pasirinkite funkcija"
+echo "1 : Į ekraną išvedama šiandienos data ir tikslus laikas (val., min., sek.)."
+echo "2 : Parodomas klaviatūra įvestų metų ir mėnesio kalendorius. "
+echo "3 : Iškviečiamas tekstinės sąsajos skaičiuoklis. "
+echo "4 : Ekrane parodoma informacija apie tam tikrą komandą. Komandos pavadinimas įvedamas klaviatūros pagalba. "
+
+read n
+if [ $n -eq 1 ]
+then
+date
+
+elif [ $n -eq 2 ]
+then
+echo " "
+
+elif [ $n -eq 3 ]
+then
+echo " "
+
+elif [ $n -eq 4 ]
+then
+echo "Irasykite komandos pavadinima"
+read komanda
+help $komanda
+fi
