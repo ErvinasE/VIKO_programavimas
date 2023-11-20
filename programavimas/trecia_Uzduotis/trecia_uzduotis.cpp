@@ -33,7 +33,6 @@ bool balses()
 }
 int dbd(int sk1, int sk2)
 {
-    
 }
 int main ()
 {
