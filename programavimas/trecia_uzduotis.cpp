@@ -33,6 +33,12 @@ bool balses()
 }
 int dbd(int sk1, int sk2)
 {
+    int d1, d2;
+    int liek = 1;
+    while (liek != 0)
+    {
+
+    }
 }
 int main ()
 {
