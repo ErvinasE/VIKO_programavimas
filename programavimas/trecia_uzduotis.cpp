@@ -101,9 +101,12 @@ int main ()
     int sk2;
     while (true)
     {
-        cout << "Pasirinkite kokia funckcija atlikti : 1 , 2, 3 ?" << endl;
+        cout << "Pasirinkite kokia funckcija atlikti : 1 , 2, 3" << endl;
         cin >> sk;
-        
+        // if (sk == 0)
+        // {
+        //     break;
+        // }
         switch (sk)
         {
             case 1:
@@ -117,7 +120,7 @@ int main ()
             cin >> sk1;
             cin >> sk2;
             cout << dbd(sk1,sk2);
-            break;  
+            break;
         }
     }
     return 0;
