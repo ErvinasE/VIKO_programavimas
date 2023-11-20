@@ -5,11 +5,30 @@ using namespace std;
 
 void palindromas()
 {
-    string sk;
-    cout << "Iveskite skaiciu" << endl;
-    cin >> sk;
-    cout << sk;
-}
+    int num, sk, skaitmuo, atv = 0;
+    cout << "Iveskite numeri : " << endl;
+    cin >> num;
+    sk = num;
+
+    do
+    {
+        skaitmuo = num % 10;
+        atv = (atv * 10) + skaitmuo;
+        num = num / 10;
+
+
+    } while (num!= 0);
+
+    if (sk == atv)
+    {
+        cout << "Palindromas" << endl;
+    }
+    else 
+    {
+        cout << "nera palindromas" << endl;
+    }
+
+}    
 // balsiu tikrinimo funkcija
 bool balses()
 {   
@@ -69,14 +88,9 @@ int dbd(int sk1, int sk2)
         }
         if (d2 > 0 && d1 == 0)
         {
-            dbd == d2;
+            dbd = d2;
             return dbd;
         }
-        // cout << "SK1:" << d1 << endl;
-        // cout << "SK2:" << d2 << endl;
-        // cout << "LIEK : " << liek << endl;
-        // cout << "DAL : " << dal << endl;
-
 
     }
 }
