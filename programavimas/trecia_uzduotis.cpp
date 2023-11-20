@@ -5,7 +5,10 @@ using namespace std;
 
 void palindromas()
 {
-
+    string sk;
+    cout << "Iveskite skaiciu" << endl;
+    cin >> sk;
+    cout << sk;
 }
 // balsiu tikrinimo funkcija
 bool balses()
