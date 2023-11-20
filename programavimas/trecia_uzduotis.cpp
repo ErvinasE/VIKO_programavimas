@@ -39,15 +39,45 @@ int dbd(int sk1, int sk2)
     int d1 = 0, d2 = 0, dbd = 0;
     int liek = 1;
     int dal = 0;
+    int n = 0;
     while (liek > 0)
-    {
-        liek = sk1 % sk2;
-        dal = sk1 / sk2;
+    {   
+        if (sk1 > sk2 && n == 0)
+        {
+            d1 = sk1;
+            d2 = sk2;
+        }
+        if (sk2 > sk1 && n == 0)
+        {
+            d1 = sk2;
+            d2 = sk1;
+        }
+        
+        liek = d1 % d2;
+        dal = d1 / d2;
 
-        sk1 = sk2;
-        sk2 = liek;
+        d1 = d2;
+        d2 = liek;
 
         dbd = dal;
+        n++;
+
+        if (d1 > 0 && d2 == 0)
+        {
+            dbd = d1;
+            return dbd;
+        }
+        if (d2 > 0 && d1 == 0)
+        {
+            dbd == d2;
+            return dbd;
+        }
+        // cout << "SK1:" << d1 << endl;
+        // cout << "SK2:" << d2 << endl;
+        // cout << "LIEK : " << liek << endl;
+        // cout << "DAL : " << dal << endl;
+
+
     }
 }
 int main ()
