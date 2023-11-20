@@ -7,7 +7,7 @@ void palindromas()
 {
 
 }
-
+// balsiu tikrinimo funkcija
 bool balses()
 {   
     string raide;
@@ -30,14 +30,21 @@ bool balses()
             continue;
         }
     }       
-}
+} // DBD skaiciavimo funkcija
 int dbd(int sk1, int sk2)
-{
-    int d1, d2;
+{   
+    int d1 = 0, d2 = 0, dbd = 0;
     int liek = 1;
-    while (liek != 0)
+    int dal = 0;
+    while (liek > 0)
     {
+        liek = sk1 % sk2;
+        dal = sk1 / sk2;
 
+        sk1 = sk2;
+        sk2 = liek;
+
+        dbd = dal;
     }
 }
 int main ()
@@ -62,10 +69,9 @@ int main ()
             cout << "iveskite 2 skaicius" << endl;
             cin >> sk1;
             cin >> sk2;
-            dbd(sk1,sk2);
+            cout << dbd(sk1,sk2);
             break;  
         }
     }
-
     return 0;
 }
