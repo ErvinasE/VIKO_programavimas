@@ -1,14 +1,1 @@
-#!/bin/bash
-
-rows=10  # Number of rows for the diagonal line
-
-for ((i=1; i<=$rows; i++)); do
-    for ((j=1; j<=$rows; j++)); do
-        if [ $j -eq $i ]; then
-            echo -n $i
-        else
-            echo -n " "
-        fi
-    done
-    echo
-done
+echo test | wc -c

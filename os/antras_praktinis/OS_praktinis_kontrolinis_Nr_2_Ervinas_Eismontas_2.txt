@@ -1,0 +1,48 @@
+
+while [ "$pasirinkimas" != "e" ]
+do
+echo "Pasirinkite raidemis:"
+echo a. Failo 1 įvedimas
+echo b. Failo 2 įvedimas
+echo c. Apskaičiuoti kuris failas turi daugiau simbolių.
+echo d. Rezultato parodymas
+echo e. Išeiti
+read pasirinkimas
+
+if [ "$pasirinkimas" == "a" ]
+then
+echo "Iveskite pirma faila"
+read failas1
+while [ -d $failas1 ]
+do
+echo Pasirinkite tinkama faila
+read failas1
+done
+
+elif [ "$pasirinkimas" == "b" ]
+then
+echo "Iveskite antra faila"
+read failas2
+while [ -d $failas2 ]
+do
+echo Pasirinkite tinkama faila
+read failas2
+done
+
+elif [ "$pasirinkimas" == "c" ]
+then
+fail1Dydis=`wc -m < $failas1`
+fail2Dydis=`wc -m < $failas2`
+if [ $fail1Dydis -gt $fail2Dydis ]
+then
+didesnisFailas=$failas1
+failoDydis=$fail1Dydis
+else
+didesnisFailas=$failas2
+failoDydis=$fail2Dydis
+fi
+elif [ "$pasirinkimas" == "d" ]
+then
+echo "Daugiau simboliu turi: $didesnisFailas jame yra $failoDydis simboliu"
+fi
+done
