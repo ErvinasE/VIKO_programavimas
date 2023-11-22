@@ -12,12 +12,7 @@ f=$i
 fi
     for ((j=1; j<=$f; j++))
 do
-	if [ $j -eq $i ]
-then
-        echo -n $n
-else 
-echo -n $n
-fi
+	echo -n "" $n
 done
 echo
 done
