@@ -1,0 +1,14 @@
+echo Iveskite sekos ilgi
+read n
+echo iveskite nelygini skaiciu kuriuo prasides seka
+read a
+while [ $((a %2)) -eq 0 ]
+do
+echo Iveskite nelygini skaiciu
+read a
+done
+for ((i=1;i<=n;i++))
+do
+echo -n "$a, "
+((a=a+2))
+done

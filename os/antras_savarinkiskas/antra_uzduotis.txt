@@ -37,7 +37,7 @@ then
 echo `expr $pirmas_sk - $antras_sk`
 elif [ $pas -eq 3 ]
 then
-echo `expr $pirmas_sk * $antras_sk`
+echo `expr $pirmas_sk \* $antras_sk`
 elif [ $pas -eq 4 ]
 then
 echo `expr $pirmas_sk / $antras_sk`

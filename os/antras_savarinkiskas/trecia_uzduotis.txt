@@ -1,0 +1,19 @@
+echo "iveskite failo pavadinima"
+read f
+if [ -w $f ]
+then 
+echo Yra teise rasyt
+else
+echo nera teises rasyti
+fi
+if [ -r $f ]
+then echo yra teise skaityti
+else
+echo nera teises skaityti
+fi
+if [ -x $f ]
+then
+echo yra teise vykdyti
+else 
+echo nera teises vykdyti
+fi
