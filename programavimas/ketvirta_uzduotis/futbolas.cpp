@@ -1,20 +1,23 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <iomanip>
 
 using namespace std;
 
 int main ()
 {   
-    string text;
+    double kaina, pardBilietai, suma;
     ifstream file;
     file.open("bilietai.txt");
-    while (getline(file, text))
+    for (int i = 0;i<4;i++)
     {
-        cout << text << endl;
+        file>>kaina>>pardBilietai;
+        cout << fixed << setprecision(0)<<" Bielietu skaicius : " << pardBilietai;
+        suma = pardBilietai * kaina;
+        cout << fixed << setprecision(2)<<" Bendra pardavimu suma :" << suma << endl;
     }
-    file.close();
-    cout << text << endl;
 
+    file.close();
     return 0;
 }

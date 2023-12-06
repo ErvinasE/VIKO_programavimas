@@ -1,0 +1,33 @@
+echo 1. Naujas irasas
+echo 2. iraso paieska pagal varda
+echo 3. viso iraso perziura
+echo 4. iraso salinimas pagal eilutes nr
+echo "Pasirinkti kokia funkcija atlikti"
+read pas
+touch kontaktai.txt
+
+if [ $pas -eq 1 ]
+then
+echo "Iveskite varda"
+read vardas
+echo "Iveskite pavarde"
+read pavarde
+echo "telefono nr"
+read tel
+echo "el. pastas"
+read pastas
+echo "$vardas $pavarde $tel $pastas" >> kontaktai.txt
+elif [ $pas -eq 2 ]
+then
+echo "Kokio vardo nori ieskoti"
+read paieska
+grep $paieska kontaktai.txt
+elif [ $pas -eq 3 ]
+then
+cat kontaktai.txt
+elif [ $pas -eq 4 ]
+then
+echo "Kokia eilute norit pasalinti?"
+read eilute
+sed -i "$eilute"d kontaktai.txt
+fi
