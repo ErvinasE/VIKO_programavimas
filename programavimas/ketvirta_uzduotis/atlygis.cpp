@@ -13,7 +13,6 @@ int main ()
     file.open("salary.txt");
     ofstream file2;
     file2.open("newSalary.txt");
-
     for (int i = 0;i<3;i++)
     {
         file>>pavarde>>vardas>>dabartinisAtlyginimas>>procentai;
