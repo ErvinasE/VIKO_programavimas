@@ -1,0 +1,14 @@
+echo Iveskite norima failo varda:
+read failo_pavadinimas
+touch $failo_pavadinimas.txt
+echo Iveskite failo teksta, kad nutraukti, spausti CTRL + D:
+cat > $failo_pavadinimas.txt
+echo Eiluciu kiekis:
+wc -l < $failo_pavadinimas.txt
+echo Kuria eilute noretumet panaikinti?
+read m
+sed -i "$m"d $failo_pavadinimas.txt
+cat -n  $failo_pavadinimas.txt
+
+
+

@@ -1,0 +1,9 @@
+echo Iveskite failo pavadinima :
+read failo_pavadinimas
+touch $failo_pavadinimas.txt
+who | sort  > $failo_pavadinimas.txt
+echo Iveskite kiek eiluciu norite pamatyti
+read n
+cat $failo_pavadinimas.txt | sed -n 1,"$n"p
+
+
