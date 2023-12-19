@@ -41,8 +41,14 @@ int main()
     showMenu(menuList);
     bool expression = true;
 
-    double suma=0;
+    double suma1, suma2, suma3, suma4, suma5, suma6, suma7, suma8 = 0;
     int pasirinkimas;
+    string menuItem;
+
+    string patiekalas[50];
+    double patiekaloKaina[50];
+    int kiekis = 0;
+
 
     while(expression)
     {
@@ -51,30 +57,58 @@ int main()
         switch (pasirinkimas)
         {
         case 1:
-            suma=suma+menuList[0].menuPrice;
+            suma1=suma1+menuList[0].menuPrice;
+            patiekalas[0] = menuList[0].menuItem;
+            patiekaloKaina[0] = suma1;
             break;
         case 2:
-            suma = suma + menuList[1].menuPrice;
+            suma2 = suma2 + menuList[1].menuPrice;
+            patiekalas[1] = menuList[1].menuItem;
+            patiekaloKaina[1] = suma2;
+            break;
         case 3:
-            suma=suma+menuList[2].menuPrice;
+            suma3=suma3+menuList[2].menuPrice;
+            patiekalas[2] = menuList[2].menuItem;
+            patiekaloKaina[2] = suma3;
             break;
         case 4:
-            suma = suma + menuList[3].menuPrice;
+            suma4 = suma4 + menuList[3].menuPrice;
+            patiekalas[3] = menuList[3].menuItem;
+            patiekaloKaina[3] = suma4;
+            break;
         case 5:
-            suma=suma+menuList[4].menuPrice;
+            suma5=suma5+menuList[4].menuPrice;
+            patiekalas[4] = menuList[4].menuItem;
+            patiekaloKaina[4] = suma5;
             break;
         case 6:
-            suma = suma + menuList[5].menuPrice;
+            suma6 = suma6 + menuList[5].menuPrice;
+            patiekalas[5] = menuList[5].menuItem;
+            patiekaloKaina[5] = suma6;
+            break;
         case 7:
-            suma=suma+menuList[6].menuPrice;
+            suma7=suma7+menuList[6].menuPrice;
+            patiekalas[6] = menuList[6].menuItem;
+            patiekaloKaina[6] = suma7;
             break;
         case 8:
-            suma = suma + menuList[7].menuPrice;
-        
+            suma8 = suma8 + menuList[7].menuPrice;
+            patiekalas[7] = menuList[7].menuItem;
+            patiekaloKaina[7] = suma8;
+            break;
         default:
             break;
         }
         if(pasirinkimas == 0)
+        {
+            break;
+        }
+        
+    }
+    for (int i = 0;i < 8;i++)
+    {
+        cout << patiekalas[i] << "  " << patiekaloKaina[i] << endl;
+        if (patiekalas[i] == "")
         {
             break;
         }
