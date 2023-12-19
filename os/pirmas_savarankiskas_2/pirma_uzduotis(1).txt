@@ -1,0 +1,9 @@
+echo Iveskite pirma skaiciu
+read pirmas
+echo Iveskite antra skaiciu
+read antras
+sandauga=`expr $pirmas \* $antras`
+liekana=`expr $pirmas % $antras`
+rez=`expr $sandauga - $liekana`
+echo Pirmas ivestas skaicius yra $pirmas, antras yra $antras, ju sandauga yra lygi $sandauga, is jos atemus liekana $liekana yra
+echo gaunamas $rez

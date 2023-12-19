@@ -1,0 +1,16 @@
+echo Iveskite failo vardas, kuris egzistuoja:
+read A
+echo Iveskite antro failo varda, kuris egzistuoja:
+read B
+if [ -f $A.txt ] && [ -f $B.txt ]
+then
+X1=`wc -m < $A.txt`
+Y1=`wc -m < $B.txt`
+X2=`wc -l < $A.txt`
+Y2=`wc -l < $B.txt`
+Z1=`expr $X1 + $Y1`
+Z2=`expr $X2 + $Y2`
+echo Failo $A.txt simboliu iekis yra lygus $X1, eiluciu kiekis - $X2, failo $B.txt simboliu kiekis yra lygus $Y1, eiluciu kiekis - $Y2.Benras dvieju failu $A.txt ir $B.txt simboliu kiekis yra lygus $Z1 o eiluciu kiekis - $Z2
+else 
+echo "failai neegzistuoja, prasom paleist is naujo programa"
+fi
