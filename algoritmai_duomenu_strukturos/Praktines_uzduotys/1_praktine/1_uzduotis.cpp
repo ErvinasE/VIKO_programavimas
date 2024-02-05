@@ -10,15 +10,8 @@ int main ()
     int temp;
     int melementas, delementas;
     int mas[7] = {1, 6, 120, 2, -2, -6, -7};
-    int mas2[7];
-    for (int i = 0; i<=7;i++)
-    {
-        // skaiciuojame neigiamu elemntu suma
-        if ( mas[i] < 0)
-        {
-            nsuma = nsuma + mas[i];
-        }
-    }
+    int didz_indeksas, maz_indeksas;
+    int intervalo_sandauga = 1;
         // didziausio elemento radimas
         delementas = mas[0];
     for (l = 0;l<7;l++)
@@ -26,6 +19,11 @@ int main ()
         if (delementas < mas[l])
         {
             delementas = mas[l];
+        }
+        // skaiciuojame neigiamu elemntu suma
+        if ( mas[l] < 0)
+        {
+            nsuma = nsuma + mas[l];
         }
     }
         // maziausio elemento radimas
@@ -36,8 +34,27 @@ int main ()
         {
             melementas = mas[i];
         }
-
     }
+
+    // maziausio ir didziausio elementu indekso suradimas
+    for (int i = 0;i<7;i++)
+    {
+        if (mas[i] == delementas)
+        {
+            didz_indeksas = i;
+        }
+        if (mas[i] == melementas)
+        {
+            maz_indeksas = i;
+        }
+    }
+
+    // elementu sandauga esanciu tarp didziausio ir maziausio intervalo
+    for (int i = didz_indeksas + 1;i <maz_indeksas;i++)
+    {
+        intervalo_sandauga = intervalo_sandauga * mas[i];
+    }
+
         // rikiavimas elementu nuo maziausio iki didziausio
     for (int j = 0;j<7;j++)
     {   
@@ -49,17 +66,19 @@ int main ()
                 mas[k] = mas[k+1];
                 mas[k+1] = temp;
             }
-        }
-        
+        } 
     }
-
+    // surusiuotas masyvas didejimo tvarka
+    cout << "Surusiuotas masyvas didejimo tvarka :" << endl;
     for (int i = 0;i< 7;i++)
     {
         cout << mas[i] << ",";
     }
+    cout << endl;
     cout << "Neigiamu skaiciu suma "<< nsuma << endl;
     cout << "Didziausias skaicius : " << delementas << endl;
     cout << "Maziausias skaicius : " << melementas << endl;
+    cout << "Elementu esanciu tarpDidz. ir maz. intervalo sandauga : " << intervalo_sandauga;
 
 
 
