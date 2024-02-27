@@ -3,15 +3,14 @@
 
 using namespace std;
 
-int l = 0;
-int z = 0;
 int main ()
-{   int nsuma = 0;
+{   int mas[7] = {1, 6, 120, 2, -2, -6, -7};
+    int nsuma = 0;
     int temp;
     int melementas, delementas;
-    int mas[7] = {1, 6, 120, 2, -2, -6, -7};
     int didz_indeksas, maz_indeksas;
     int intervalo_sandauga = 1;
+    int l = 0;
         // didziausio elemento radimas
         delementas = mas[0];
     for (l = 0;l<7;l++)
@@ -50,7 +49,7 @@ int main ()
     }
 
     // elementu sandauga esanciu tarp didziausio ir maziausio intervalo
-    for (int i = didz_indeksas + 1;i <maz_indeksas;i++)
+    for (int i = didz_indeksas + 1;i < maz_indeksas;i++)
     {
         intervalo_sandauga = intervalo_sandauga * mas[i];
     }
@@ -76,9 +75,8 @@ int main ()
     }
     cout << endl;
     cout << "Neigiamu skaiciu suma "<< nsuma << endl;
-    cout << "Didziausias skaicius : " << delementas << endl;
-    cout << "Maziausias skaicius : " << melementas << endl;
-    cout << "Elementu esanciu tarpDidz. ir maz. intervalo sandauga : " << intervalo_sandauga;
+    cout << "Elementu esanciu tarp Didz. ir maz. intervalo sandauga: " << endl;
+    cout << intervalo_sandauga << endl;
 
 
 
